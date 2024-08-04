@@ -1,7 +1,7 @@
 # <p align="center">MedficientSAM Reproduced</p>
 
 <p align="center">
-<img height="500" alt="screen" src="efficientsam.png">
+<img height="250" alt="screen" src="efficientsam.png">
 
 </p>
 
@@ -57,8 +57,8 @@ The computational metrics are obtained on an Intel(R) Core(TM) i9-10900K.
 The Docker images can be found [here](https://drive.google.com/drive/folders/1BuS3gJ4ycJo2hrQ-vT-DDwdip-hSdIq0?usp=sharing).
 
 ```
-docker load -i seno.tar.gz
-docker container run -m 8G --name seno --rm -v $PWD/test_input/:/workspace/inputs/ -v $PWD/test_output/:/workspace/outputs/ seno:latest /bin/bash -c "sh predict.sh"
+docker load -i icimhdu_reproduce1st.tar.gz
+docker container run -m 8G --name seno --rm -v $PWD/test_input/:/workspace/inputs/ -v $PWD/test_output/:/workspace/outputs/ icimhdu_reproduce1st:latest /bin/bash -c "sh predict.sh"
 ```
 
 To measure the running time (including Docker starting time), see https://github.com/bowang-lab/MedSAM/blob/LiteMedSAM/CVPR24_time_eval.py
