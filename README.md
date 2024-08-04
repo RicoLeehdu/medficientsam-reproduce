@@ -1,7 +1,7 @@
 # <p align="center">MedficientSAM Reproduced</p>
 
 <p align="center">
-<img height="250" alt="screen" src="efficientsam.png">
+<img height="500" alt="screen" src="efficientsam.png">
 
 </p>
 
