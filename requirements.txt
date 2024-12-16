@@ -1,0 +1,14 @@
+hydra-colorlog
+hydra-optuna-sweeper
+rootutils
+albumentations
+lru-dict
+matplotlib
+onnx
+onnxsim
+onnxruntime==1.16.0
+onnxruntime-openvino==1.16.0
+pandas
+fvcore
+torchinfo
+
