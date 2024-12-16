@@ -85,22 +85,22 @@ Note: There is no additional processing steps for training and validation datase
 
 Model training is divided into two stages: **distillation** and **fine-tuning**, and model types are divided into three types: l0, l1 and l2.  
 
-1. Prepare pretrained weights from [MedSAM](https://github.com/bowang-lab/MedSAM/tree/LiteMedSAM) 
+1. Prepare pretrained weights from [MedSAM](https://github.com/bowang-lab/MedSAM/tree/LiteMedSAM) .
 
     Download the `medsam_vit_b.pth `  into `/weights/medsam` .
 
 1. Start distill and fine-tune model. 
 
-```bash
-# Take the l0 model type as an example: 
-cd train_scripts 
-# 1. Distillation l0 
-sh distill_l0.sh 
-# 2. finetune l0 with augment
-sh finetune_l0_augment.sh 
-# or finetune l0 without augment
-sh finetune_l0_unaugment.sh
-```
+    ```bash
+    # Take the l0 model type as an example: 
+    cd train_scripts 
+    # 1. Distillation l0 
+    sh distill_l0.sh 
+    # 2. finetune l0 with augment
+    sh finetune_l0_augment.sh 
+    # or finetune l0 without augment
+    sh finetune_l0_unaugment.sh
+	```
 
 Note: The data augment is to offset the position of the prompt box by a small amount to simulate the disturbance phenomenon of the prompt box. 
 
@@ -185,7 +185,8 @@ Method: configure the `WANDB_API_KEY` in `.env`
 
 2. Modify `checkpoint_path`  in yaml to the target ckpt path.
 
-   ```
+   ```yaml
+   # /config/experiment/finetune_l0.yaml
    model:
      _target_: src.models.base_sam.BaseSAM.construct_from
    
@@ -263,16 +264,20 @@ The computational metrics are obtained on an Intel(R) Core(TM) i9-10900K.
 <p align="center">
 <img height="500" alt="screen" src="./pics/distill-l2.png">
 </p>
+
 #### Finetuned-L0
+
 <p align="center">
 <img height="500" alt="screen" src="./pics/finetuned-l0.png">
 </p>
 #### Finetuned-L1
+
 <p align="center">
 <img height="500" alt="screen" src="./pics/finetuned-l1.png">
 </p>
 
 #### Finetuned-L2
+
 <p align="center">
 <img height="500" alt="screen" src="./pics/finetuned-l2.png">
 </p>
