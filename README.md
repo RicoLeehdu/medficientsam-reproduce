@@ -246,35 +246,32 @@ The computational metrics are obtained on an Intel(R) Core(TM) i9-10900K.
 
 ## Training Details
 
-#### Distilled-L0
+- **Distilled-L0**
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/distill-l0.png">
 </p>
-
-#### Distilled-L1
+- **Distilled-L1**
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/distill-l1.png">
 </p>
-#### Distilled-L2
+- **Distilled-L2**
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/distill-l2.png">
 </p>
-
-#### Finetuned-L0
+- **Finetuned-L0**
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/finetuned-l0.png">
 </p>
-#### Finetuned-L1
+- **Finetuned-L1**
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/finetuned-l1.png">
 </p>
-
-#### Finetuned-L2
+- **Finetuned-L2**
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/finetuned-l2.png">
