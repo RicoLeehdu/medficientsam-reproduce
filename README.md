@@ -15,7 +15,7 @@ This repository is the implementation of reproduced [medficientsam](https://gith
 
 ### Local Environments
 
-| System                  | Ubuntu 22.04.5 LTS              |
+| System                  | Ubuntu 22.04.6 LTS              |
 | ----------------------- | ------------------------------- |
 | CPU                     | Intel(R) Xeon(R) Silver 4114    |
 | RAM                     | 128GB                           |
@@ -33,9 +33,9 @@ conda env create -f environment.yaml -n medficientsam-reproduce
 # 3. Activate it
 conda activate medficientsam-reproduce
 # 4. Install requirements by pip 
-pip instal -r requirements.txt
+pip install -r requirements.txt
 
-# choice for accelerate pip installation
+# Optinal choice for accelerate pip installation
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 
@@ -43,9 +43,11 @@ pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/si
 
 The Docker images can be found [here](https://drive.google.com/drive/folders/1BuS3gJ4ycJo2hrQ-vT-DDwdip-hSdIq0?usp=sharing).
 
-```
+```bash
+# 1. Load image 
 docker load -i icimhdu_reproduce1st.tar.gz
-docker container run -m 8G --name seno --rm -v $PWD/test_input/:/workspace/inputs/ -v $PWD/test_output/:/workspace/outputs/ icimhdu_reproduce1st:latest /bin/bash -c "sh predict.sh"
+# 2. Run test 
+docker container run -m 8G --name seno --rm -v $PWD/test_input/:/workspace/inputs/ -v $PWD/test_output/:/workspace/outputs/ icimhdu_reproduce1st:latest /bin/bash -c "sh predict.sh" 
 ```
 
 To measure the running time (including Docker starting time), see https://github.com/bowang-lab/MedSAM/blob/LiteMedSAM/CVPR24_time_eval.py
@@ -58,7 +60,7 @@ To measure the running time (including Docker starting time), see https://github
 
 2. Download and unzip the files to your dataset folder, copy `.env.example` to `.env` and modify `CVPR2024_MEDSAM_DATA_DIR` to the dataset path. The directory structure should look like this:
 
-    ```
+    ```bash
     CVPR24-MedSAMLaptopData
     ├── train_npz
     │   ├── CT
