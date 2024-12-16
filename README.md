@@ -1,6 +1,6 @@
 # <p align="center">MedficientSAM Reproduced</p>
 
-This repository is the reproduced implementation of  [medficientsam](https://github.com/hieplpvip/medficientsam/tree/master) (Rank.1 Solution of CVPR Challenge-MedSAM Laptop).
+This repository is the implementation of reproduced [medficientsam](https://github.com/hieplpvip/medficientsam/tree/master) (Rank.1 Solution of CVPR Challenge-MedSAM Laptop).
 
 <p align="center">
 <img height="500" alt="screen" src="./pics/efficientsam.png">
