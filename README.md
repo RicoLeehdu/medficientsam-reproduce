@@ -171,17 +171,15 @@ model:
 
 ### Training Logs and Visualization
 
-Tool: Wandb
+- Tool: Wandb
 
-Method: configure the `WANDB_API_KEY` in `.env` 
+- Method: configure the `WANDB_API_KEY` in `.env` 
 
 
 
 ## Inference
 
-1. Download trained checkpoints here and put them into individual folders, eg:  `/medficientsam-reproduce/weights/distilled-l0`:
-
-​	https://drive.google.com/drive/folders/1DEfwCM8eOrF84818Tij838ZD9np_OvhK?usp=sharing
+1. Download trained checkpoints [here](	https://drive.google.com/drive/folders/1DEfwCM8eOrF84818Tij838ZD9np_OvhK?usp=sharing) and put them into individual folders, eg:  `/medficientsam-reproduce/weights/distilled-l0`.
 
 2. Modify `checkpoint_path`  in yaml to the target ckpt path.
 
